@@ -744,3 +744,32 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.dropbtn {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 0.5rem;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #444;
+}

@@ -4,6 +4,7 @@
   "homepage": "https://tkannadigaru.github.io/",
   "private": true,
   "dependencies": {
+    "@react-lang/language": "^1.0.3",
     "@react-pdf/renderer": "^2.2.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",

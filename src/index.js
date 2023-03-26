@@ -3,10 +3,19 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Language, setDefault, setTranslations } from '@react-lang/language'
+import en from './Assets/en.json'
+import kn from './Assets/kn.json'
+import sv from './Assets/sv.json'
+
+setDefault('kn')
+setTranslations({ en, kn, sv })
 
 ReactDOM.render(
   <React.StrictMode>
+    <Language lang="en">
     <App />
+    </Language>
   </React.StrictMode>,
   document.getElementById("root")
 );

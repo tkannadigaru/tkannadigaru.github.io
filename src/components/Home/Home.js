@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { Language } from '@react-lang/language'
 
 function Home() {
   return (
@@ -11,7 +12,7 @@ function Home() {
         <Particle />
         <Container className="home-content">
           <Row>
-            <Col md={7} className="home-header">
+            <Col className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
@@ -19,20 +20,24 @@ function Home() {
                 </span>
               </h1>
 
-              <h1 className="heading-name">
-                We are
-                <strong className="main-name"> TROLLHÄTTAN KANNADIGARU</strong>
-              </h1>
+              
+              <Language.Consumer>
+                {({ get }) => <><h1 className="heading-name">
+                  We are
+                  <strong className="main-name"> {get('message')}</strong>
+                </h1></>}
+              </Language.Consumer>
 
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
+              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </Col>
 
           </Row>
         </Container>
       </Container>
-      <Home2 />
+      {/* <Home2 /> */}
     </section>
   );
 }

@@ -21,6 +21,7 @@ function About() {
               <strong className="purple">Trollhättan Kannadigara Sangha</strong>
             </h1>
             <Aboutcard />
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
           </Col>
         </Row>
       </Container>

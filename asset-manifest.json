@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/home/static/css/main.043aa170.css",
+    "main.js": "/home/static/js/main.32f4985c.js",
+    "static/js/415.fc063c41.chunk.js": "/home/static/js/415.fc063c41.chunk.js",
+    "static/js/787.f6e65957.chunk.js": "/home/static/js/787.f6e65957.chunk.js",
+    "static/media/ugadi-2023.jpg": "/home/static/media/ugadi-2023.7db81ba56370aa41d36e.jpg",
+    "static/media/ugadi-2022.jpg": "/home/static/media/ugadi-2022.bdd6b087ef133dabae4a.jpg",
+    "static/media/deepavali-2019.jpg": "/home/static/media/deepavali-2019.1a002c1e2d110cd58119.jpg",
+    "static/media/deepavali-2021.jpg": "/home/static/media/deepavali-2021.0b62deddff6408bf4383.jpg",
+    "static/media/deepavali-2022.jpg": "/home/static/media/deepavali-2022.78d50f1de75b85623820.jpg",
+    "static/media/hampi-home-bg.jpg": "/home/static/media/hampi-home-bg.8f6d35e4f0700cc3f22a.jpg",
+    "static/media/karantaka-flag-logo.jpg": "/home/static/media/karantaka-flag-logo.2b362f06c05154ef4154.jpg",
+    "static/media/pre.svg": "/home/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/home/index.html",
+    "main.043aa170.css.map": "/home/static/css/main.043aa170.css.map",
+    "main.32f4985c.js.map": "/home/static/js/main.32f4985c.js.map",
+    "415.fc063c41.chunk.js.map": "/home/static/js/415.fc063c41.chunk.js.map",
+    "787.f6e65957.chunk.js.map": "/home/static/js/787.f6e65957.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.043aa170.css",
+    "static/js/main.32f4985c.js"
+  ]
+}

@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import hampiimage from "../../Assets/hampi-home-bg.jpg"
 import { Language } from '@react-lang/language'
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
         <Particle />
         <Container className="home-content">
           <Row>
-            <Col className="home-header">
+            <Col md={7} className="home-header">
               <h1 style={{ paddingBottom: 15 }} className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
@@ -32,6 +33,15 @@ function Home() {
                 <Type />
               </div>
               <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            </Col>
+
+            <Col md={5} style={{ paddingBottom: 20 }}>
+              <img
+                src={hampiimage}
+                alt="home pic"
+                className="img-fluid"
+                style={{ maxHeight: "450px" }}
+              />
             </Col>
 
           </Row>

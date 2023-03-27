@@ -102,10 +102,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume1"
+                to="/faq"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Legal
+                <CgFileDocument style={{ marginBottom: "2px" }} /> FAQ
               </Nav.Link>
             </Nav.Item>
           </Nav>

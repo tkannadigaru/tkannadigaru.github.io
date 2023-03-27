@@ -33,6 +33,16 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
+                href="https://instagram.com/trollhattankannadigaru?igshid=ZDdkNTZiNTM="
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillInstagram />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
                 href="trollhattenkannadigaru@gmail.com"
                 style={{ color: "white" }}
                 target="_blank" 

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.92156f48.css",
-    "main.js": "/static/js/main.030d6b7c.js",
+    "main.css": "/static/css/main.faf7cded.css",
+    "main.js": "/static/js/main.94d6a775.js",
     "static/js/415.fc063c41.chunk.js": "/static/js/415.fc063c41.chunk.js",
     "static/js/787.f6e65957.chunk.js": "/static/js/787.f6e65957.chunk.js",
     "static/media/ugadi-2023.jpg": "/static/media/ugadi-2023.7db81ba56370aa41d36e.jpg",
@@ -10,16 +10,17 @@
     "static/media/deepavali-2021.jpg": "/static/media/deepavali-2021.0b62deddff6408bf4383.jpg",
     "static/media/deepavali-2022.jpg": "/static/media/deepavali-2022.78d50f1de75b85623820.jpg",
     "static/media/hampi-home-bg.jpg": "/static/media/hampi-home-bg.8f6d35e4f0700cc3f22a.jpg",
+    "static/media/karnataka-kavi-map.jpg": "/static/media/karnataka-kavi-map.71ed3eafdfc20afd7b78.jpg",
     "static/media/svflag.png": "/static/media/svflag.380b85027ae332e358b0.png",
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
-    "main.92156f48.css.map": "/static/css/main.92156f48.css.map",
-    "main.030d6b7c.js.map": "/static/js/main.030d6b7c.js.map",
+    "main.faf7cded.css.map": "/static/css/main.faf7cded.css.map",
+    "main.94d6a775.js.map": "/static/js/main.94d6a775.js.map",
     "415.fc063c41.chunk.js.map": "/static/js/415.fc063c41.chunk.js.map",
     "787.f6e65957.chunk.js.map": "/static/js/787.f6e65957.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.92156f48.css",
-    "static/js/main.030d6b7c.js"
+    "static/css/main.faf7cded.css",
+    "static/js/main.94d6a775.js"
   ]
 }

@@ -55,17 +55,17 @@ function NavBar() {
           <nav>
           <Language.Consumer>
             {({ handleSetLanguage, lang }) => (
-              <><button onClick={() => handleSetLanguage('kn')}><img src={knflag} className="img-fluid logo" alt="brand" /></button></>
+              <><button style={{padding: 0}} onClick={() => handleSetLanguage('kn')}><img src={knflag} className="img-fluid logo" alt="brand" /></button></>
             )}
-          </Language.Consumer>
+          </Language.Consumer>&nbsp;
           <Language.Consumer>
             {({ handleSetLanguage, lang }) => (
-              <><button onClick={() => handleSetLanguage('en')}><img src={enflag} className="img-fluid logo" alt="brand" /></button></>
+              <><button style={{padding: 0}} onClick={() => handleSetLanguage('en')}><img src={enflag} className="img-fluid logo" alt="brand" /></button></>
             )}
-          </Language.Consumer>
+          </Language.Consumer>&nbsp;
           <Language.Consumer>
             {({ handleSetLanguage, lang }) => (
-              <><button onClick={() => handleSetLanguage('sv')}><img src={svflag} className="img-fluid logo" alt="brand" /></button></>
+              <><button style={{padding: 0}} onClick={() => handleSetLanguage('sv')}><img src={svflag} className="img-fluid logo" alt="brand" /></button></>
             )}
           </Language.Consumer>
           </nav>

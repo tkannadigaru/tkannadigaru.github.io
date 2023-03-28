@@ -9,11 +9,11 @@ import kn from './Assets/language/kn.json'
 import sv from './Assets/language/sv.json'
 
 setDefault('kn')
-setTranslations({ en, kn, sv })
+setTranslations({ kn, en, sv })
 
 ReactDOM.render(
   <React.StrictMode>
-    <Language lang="en">
+    <Language>
     <App />
     </Language>
   </React.StrictMode>,

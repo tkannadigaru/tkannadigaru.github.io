@@ -155,7 +155,7 @@ button:focus {
 }
 
 .logo {
-  height: 1.4em !important;
+  height: 1.7em !important;
   width: 2.5em !important;
 }
 
@@ -775,4 +775,31 @@ button:focus {
 
 .dropdown:hover .dropbtn {
   background-color: #444;
+}
+
+/* FAQ */
+/* --------- */
+
+.accordion-button:not(.collapsed) {
+  color: Yellow !important;
+  background-color: rgb(99, 4, 99) !important;
+}
+
+.accordion-button {
+  color: red !important;
+  background-color: yellow !important;
+}
+
+.accordion-body {
+  background-color: lightyellow;
+  text-align: left;
+}
+
+code {
+  color: red !important;
+  text-align: left;
+}
+
+.accordion-item {
+  background-color: yellow !important
 }

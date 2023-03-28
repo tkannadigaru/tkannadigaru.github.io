@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import logo from "../Assets/karantaka-flag-logo.jpg";
+import knflag from "../Assets/knflag.png";
+import enflag from "../Assets/enflag.png";
+import svflag from "../Assets/svflag.png";
 import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
@@ -11,6 +13,8 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
+import { Language } from '@react-lang/language';
+
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -34,9 +38,9 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        {/* <Navbar.Brand href="/" className="d-flex">
           <img src={logo} className="img-fluid logo" alt="brand" />
-        </Navbar.Brand>
+        </Navbar.Brand> */}
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -48,6 +52,23 @@ function NavBar() {
           <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
+          <nav>
+          <Language.Consumer>
+            {({ handleSetLanguage, lang }) => (
+              <><button onClick={() => handleSetLanguage('kn')}><img src={knflag} className="img-fluid logo" alt="brand" /></button></>
+            )}
+          </Language.Consumer>
+          <Language.Consumer>
+            {({ handleSetLanguage, lang }) => (
+              <><button onClick={() => handleSetLanguage('en')}><img src={enflag} className="img-fluid logo" alt="brand" /></button></>
+            )}
+          </Language.Consumer>
+          <Language.Consumer>
+            {({ handleSetLanguage, lang }) => (
+              <><button onClick={() => handleSetLanguage('sv')}><img src={svflag} className="img-fluid logo" alt="brand" /></button></>
+            )}
+          </Language.Consumer>
+          </nav>
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
@@ -81,10 +102,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume1"
+                to="/faq"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Legal
+                <CgFileDocument style={{ marginBottom: "2px" }} /> FAQ
               </Nav.Link>
             </Nav.Item>
           </Nav>

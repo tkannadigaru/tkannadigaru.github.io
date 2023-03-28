@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
-  AiFillGithub,
-  AiOutlineTwitter,
   AiFillInstagram,
+  AiFillFacebook,
+  AiFillMail
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
@@ -23,32 +23,32 @@ function Footer() {
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://twitter.com/tkannadigaru"
+                href="https://facebook.com/groups/964408994572232"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiOutlineTwitter />
+                <AiFillFacebook />
               </a>
             </li>
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/tkannadigaru/"
-                style={{ color: "white" }}
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/tkannadigaru"
+                href="https://instagram.com/trollhattankannadigaru?igshid=ZDdkNTZiNTM="
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="trollhattenkannadigaru@gmail.com"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillMail />
               </a>
             </li>
           </ul>

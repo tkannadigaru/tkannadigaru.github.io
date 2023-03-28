@@ -3,6 +3,7 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
+import Faq from "./components/Faq/Faq";
 import Events from "./components/Events/Events";
 import Footer from "./components/Footer";
 import {
@@ -16,8 +17,11 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
+
 function App() {
   const [load, upadateLoad] = useState(true);
+
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -37,6 +41,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

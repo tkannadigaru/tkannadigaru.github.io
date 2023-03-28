@@ -2,10 +2,6 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import EventCards from "./EventCards";
 import Particle from "../Particle";
-import deepavali2019 from "../../Assets/Events/deepavali-2019.jpg";
-import deepavali2021 from "../../Assets/Events/deepavali-2021.jpg";
-import deepavali2022 from "../../Assets/Events/deepavali-2022.jpg";
-import ugadi2022 from "../../Assets/Events/ugadi-2022.jpg";
 import ugadi2023 from "../../Assets/Events/ugadi-2023.jpg";
 
 function Events() {
@@ -22,7 +18,7 @@ function Events() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <EventCards
-              imgPath={deepavali2019}
+              imgPath={ugadi2023}
               title="Deepavali 2019"
               description="A small group of 5 families getting together to celebrate Ugadi in the year 2019"
             />
@@ -30,7 +26,7 @@ function Events() {
 
           <Col md={4} className="project-card">
             <EventCards
-              imgPath={deepavali2021}
+              imgPath={ugadi2023}
               title="Deepavali 2021"
               description="A much larger group of 30 people celebrating Deepavali in the year 2021"
             />
@@ -38,7 +34,7 @@ function Events() {
 
           <Col md={4} className="project-card">
             <EventCards
-              imgPath={ugadi2022}
+              imgPath={ugadi2023}
               title="Ugadi 2022"
               description="A large group of kannadigas coming together to celebrate Ugadi 2022"
             />
@@ -46,7 +42,7 @@ function Events() {
 
           <Col md={4} className="project-card">
             <EventCards
-              imgPath={deepavali2019}
+              imgPath={ugadi2023}
               title="Celebrating Deepavali 2022"
               description="Celebrating Deepavali 2022"
             />
@@ -59,7 +55,6 @@ function Events() {
               description="Our very first Ugadi Celebration as a registered Kannada Sangha 2023"
             />
           </Col>
-
         </Row>
       </Container>
     </Container>

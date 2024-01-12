@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.33459329.css",
-    "main.js": "/static/js/main.c4a8a015.js",
+    "main.css": "/static/css/main.40b7a900.css",
+    "main.js": "/static/js/main.7e84d973.js",
     "static/js/415.fc063c41.chunk.js": "/static/js/415.fc063c41.chunk.js",
     "static/js/787.f6e65957.chunk.js": "/static/js/787.f6e65957.chunk.js",
     "static/media/hampi-home-bg.jpg": "/static/media/hampi-home-bg.8f6d35e4f0700cc3f22a.jpg",
@@ -9,13 +9,13 @@
     "static/media/svflag.png": "/static/media/svflag.380b85027ae332e358b0.png",
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
-    "main.33459329.css.map": "/static/css/main.33459329.css.map",
-    "main.c4a8a015.js.map": "/static/js/main.c4a8a015.js.map",
+    "main.40b7a900.css.map": "/static/css/main.40b7a900.css.map",
+    "main.7e84d973.js.map": "/static/js/main.7e84d973.js.map",
     "415.fc063c41.chunk.js.map": "/static/js/415.fc063c41.chunk.js.map",
     "787.f6e65957.chunk.js.map": "/static/js/787.f6e65957.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33459329.css",
-    "static/js/main.c4a8a015.js"
+    "static/css/main.40b7a900.css",
+    "static/js/main.7e84d973.js"
   ]
 }

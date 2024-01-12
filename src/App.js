@@ -8,7 +8,7 @@ import Events from "./components/Events/Events";
 import EventPage from "./components/Events/EventPage";
 import Footer from "./components/Footer";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate

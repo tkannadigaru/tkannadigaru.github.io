@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Faq from "./components/Faq/Faq";
 import Events from "./components/Events/Events";
+import EventPage from "./components/Events/EventPage";
 import Footer from "./components/Footer";
 import {
   BrowserRouter as Router,
@@ -40,6 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/*" element={<EventPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<Navigate to="/"/>} />

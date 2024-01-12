@@ -12,7 +12,8 @@ function Events() {
       async function fetchContent() {
         const response = await fetch('contents/past-events.json');
         const data = await response.json();
-        setContent(data);
+        const reversedata = data.reverse();
+        setContent(reversedata);
       }
       fetchContent();
     }, []);
@@ -38,7 +39,7 @@ function Events() {
           Upcoming <strong className="purple">Events </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are some details about upcoming by Trollhättan Kannadigas
+          Here are some details about upcoming events by Trollhättan Kannadigas
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
         { !futurecontent || futurecontent.length === 0 ? (
@@ -80,6 +81,28 @@ function Events() {
         ))}
         </Row>
       </Container>
+
+        {/*<Routes>
+          <Route
+            path="/events/*"
+            element={
+              <div>
+                <h1>Home Page</h1>
+                <ul>
+                  {content.map((event, index) => (
+                    <li key={index}>
+                      <Link to={`/events/${event.title}`}>{event.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            }
+          />
+           <Route
+            path="/events/:title"
+            element={<EventPage content={content} />}
+          /> 
+        </Routes>*/}
     </Container>
   );
 }

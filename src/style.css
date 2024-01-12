@@ -256,7 +256,6 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
   /* background-image: var(--image-gradient), url(./Assets/hampi-home-bg.jpg); */
   background-image: var(--section-background-color) !important;
   background-position: top center;
@@ -269,6 +268,8 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 .heading {
@@ -462,6 +463,18 @@ button:focus {
   padding-left: 25px !important;
   padding-right: 25px !important;
   height: auto !important;
+}
+
+.eventpage-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.eventpage-card {
+  width: 80%;
+  max-width: 500px;
 }
 
 .project-card-view {

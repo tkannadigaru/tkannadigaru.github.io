@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Ganesha habba 2024",
+        "imagePath": "eventphotos/ugadi-2023.jpg",
+        "description": "Ganesha habba 2024 even details",
+        "date": "TBD",
+        "plansheet": "https://google.com",
+        "eventAgenda": [
+            { "time": "10:00 AM", "item": "Agenda Item 1" },
+            { "time": "11:00 AM", "item": "Agenda Item 2" },
+            { "time": "12:00 PM", "item": "Agenda Item 3" }
+          ]
+    }
+]

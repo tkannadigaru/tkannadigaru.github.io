@@ -22,7 +22,8 @@ function Events() {
       async function fetchContent() {
         const response = await fetch('contents/upcoming-events.json');
         const data = await response.json();
-          setFutureContent(data);
+        const filteredItems = data.filter(item => item.status !== 'active');
+        setFutureContent(filteredItems);
       }
       fetchContent();
     }, []);
@@ -57,6 +58,7 @@ function Events() {
                 imgPath={item.imagePath}
                 title={item.title}
                 description={item.description}
+                status={item.status}
               />
             </Col>
             )))}
@@ -81,28 +83,6 @@ function Events() {
         ))}
         </Row>
       </Container>
-
-        {/*<Routes>
-          <Route
-            path="/events/*"
-            element={
-              <div>
-                <h1>Home Page</h1>
-                <ul>
-                  {content.map((event, index) => (
-                    <li key={index}>
-                      <Link to={`/events/${event.title}`}>{event.title}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            }
-          />
-           <Route
-            path="/events/:title"
-            element={<EventPage content={content} />}
-          /> 
-        </Routes>*/}
     </Container>
   );
 }

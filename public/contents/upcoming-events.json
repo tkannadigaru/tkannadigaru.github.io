@@ -1,8 +1,9 @@
 [
     {
         "title": "Ugadi 2024",
-        "imagePath": "eventphotos/ugadi-2023.jpg",
-        "description": "Ugadi 2024"
+        "status": "active",
+        "imagePath": "eventphotos/ugadi2024.jpg",
+        "description": "The first event of the year, Ugadi 2024"
     },
     {
         "title": "Ganesha Habba 2024",

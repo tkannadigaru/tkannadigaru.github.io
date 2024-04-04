@@ -6,9 +6,12 @@
         "date": "2024/04/13",
         "plansheet": "https://tinyurl.com/ugadi2024trollhattankannadigas",
         "eventAgenda": [
-            { "time": "10:00 AM", "item": "Agenda Item 1" },
-            { "time": "11:00 AM", "item": "Agenda Item 2" },
-            { "time": "12:00 PM", "item": "Agenda Item 3" }
+            { "time": "10:00 - 11:00", "item": "We start with a Pooja" },
+            { "time": "11:00 - 11:30", "item": "Update about the Sanga and Introduction" },
+            { "time": "11:30 - 13:00", "item": "Cultural activites" },
+            { "time": "13:00 - 14:30", "item": "Ugadi Special Lunch" },
+            { "time": "14:30 - 17:00", "item": "Cultural Actvities" },
+            { "time": "17:00 - EOD", "item": "After Party" },
           ]
     }
 ]

@@ -1,18 +1,13 @@
 [
     {
-        "title": "Ugadi 2024",
+        "title": "Ganesha Chathurthi 2026",
         "status": "active",
-        "imagePath": "eventphotos/ugadi2024.jpg",
-        "description": "The first event of the year, Ugadi 2024"
+        "imagePath": "eventphotos/Genasha_hubba_2026.png",
+        "description": "Ganesha Chathurthi 2026"
     },
     {
-        "title": "Ganesha Habba 2024",
+        "title": "Deepavali 2026",
         "imagePath": "eventphotos/ugadi-2023.jpg",
-        "description": "Ganesha habba 2024"
-    },
-    {
-        "title": "Deepavali 2024",
-        "imagePath": "eventphotos/ugadi-2023.jpg",
-        "description": "Deepavali 2024"
+        "description": "Deepavali 2026"
     }
 ]

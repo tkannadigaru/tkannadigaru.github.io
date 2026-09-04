@@ -39,6 +39,8 @@ function EventPage() {
                   description={item.description}
                   date={item.date}
                   plansheet={item.plansheet}
+                  location={item.location}
+                  mapsLink={item.mapsLink}
                   eventAgenda={item.eventAgenda}
                 />
               )))}

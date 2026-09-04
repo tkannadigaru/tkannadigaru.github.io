@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import knflag from "../Assets/knflag.png";
 import enflag from "../Assets/enflag.png";
 import svflag from "../Assets/svflag.png";
+import brandLogo from "../Assets/karantaka-flag-logo.jpg";
 import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
@@ -20,15 +21,13 @@ function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
-    }
-  }
+  useEffect(() => {
+    const handleScroll = () => updateNavbar(window.scrollY >= 20);
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
 
-  window.addEventListener("scroll", scrollHandler);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <Navbar
@@ -38,9 +37,13 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        {/* <Navbar.Brand href="/" className="d-flex">
-          <img src={logo} className="img-fluid logo" alt="brand" />
-        </Navbar.Brand> */}
+        <Navbar.Brand as={Link} to="/" className="brand-mark" onClick={() => updateExpanded(false)}>
+          <img src={brandLogo} className="brand-logo" alt="Kannada flag" />
+          <span>
+            <strong>Trollhättan</strong>
+            <small>Kannadigaru</small>
+          </span>
+        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -55,17 +58,17 @@ function NavBar() {
           <nav>
           <Language.Consumer>
             {({ handleSetLanguage, lang }) => (
-              <><button onClick={() => handleSetLanguage('kn')}><img src={knflag} className="img-fluid logo" alt="brand" /></button></>
+              <><button className="language-button" aria-label="Switch to Kannada" onClick={() => handleSetLanguage('kn')}><img src={knflag} className="img-fluid logo" alt="Kannada" /></button></>
             )}
           </Language.Consumer>
           <Language.Consumer>
             {({ handleSetLanguage, lang }) => (
-              <><button onClick={() => handleSetLanguage('en')}><img src={enflag} className="img-fluid logo" alt="brand" /></button></>
+              <><button className="language-button" aria-label="Switch to English" onClick={() => handleSetLanguage('en')}><img src={enflag} className="img-fluid logo" alt="English" /></button></>
             )}
           </Language.Consumer>
           <Language.Consumer>
             {({ handleSetLanguage, lang }) => (
-              <><button onClick={() => handleSetLanguage('sv')}><img src={svflag} className="img-fluid logo" alt="brand" /></button></>
+              <><button className="language-button" aria-label="Switch to Swedish" onClick={() => handleSetLanguage('sv')}><img src={svflag} className="img-fluid logo" alt="Swedish" /></button></>
             )}
           </Language.Consumer>
           </nav>

@@ -1,52 +1,53 @@
 import React, {useEffect, useState} from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import EventCards from "./EventCards";
+import EventDetailsCard from "./EventDetailsCard";
 import Particle from "../Particle";
 
 function NextEvent() {
 
-  const [futurecontent, setFutureContent] = useState(null);
+  const [eventContent, setEventContent] = useState(null);
 
     useEffect(() => {
       async function fetchContent() {
         const response = await fetch('contents/upcoming-events.json');
         const data = await response.json();
-        const filteredItem = data.find(item => item.status === 'active');
-        console.log(filteredItem)
-        setFutureContent(filteredItem);
+        const activeEvent = data.find(item => item.status === 'active');
+
+        if (!activeEvent) {
+          setEventContent([]);
+          return;
+        }
+
+        const eventFileName = activeEvent.title.replace(/\s/g, "_");
+        const detailsResponse = await fetch(`contents/${eventFileName}.json`);
+        const details = await detailsResponse.json();
+        setEventContent(details);
       }
       fetchContent();
     }, []);
 
-    if (!futurecontent) {
+    if (!eventContent) {
       return <div>Loading...</div>;
     }
 
-  return (
-    <Container fluid className="project-section">
+  return eventContent.length > 0 ? (
+    eventContent.map((item, index) => (
+      <EventDetailsCard
+        key={`${item.title}-${index}`}
+        imagePath={item.imagePath}
+        title={item.title}
+        description={item.description}
+        date={item.date}
+        location={item.location}
+        mapsLink={item.mapsLink}
+        plansheet={item.plansheet}
+        eventAgenda={item.eventAgenda}
+      />
+    ))
+  ) : (
+    <div className="event-content-empty">
       <Particle />
-      <Container>
-        <h1 className="project-heading">
-          Our Next Big <strong className="purple">Event </strong>
-        </h1>
-        <p style={{ color: "white" }}>
-          Here are some details about upcoming events by Trollhättan Kannadigas
-        </p>
-        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}> 
-        {
-
-            <Col md={4} className="project-card">
-              <EventCards
-                imgPath={futurecontent.imagePath}
-                title={futurecontent.title}
-                description={futurecontent.description}
-                status={futurecontent.status}
-              />
-            </Col>
-        }
-        </Row>
-      </Container>
-    </Container>
+      <p>No next event has been announced yet.</p>
+    </div>
   );
 }
 

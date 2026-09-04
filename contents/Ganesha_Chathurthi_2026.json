@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Ganesha habba 2026",
+        "imagePath": "eventphotos/Ganesha_hubba_2026.png",
+        "description": "Join families from across our community for a joyful Ganesha Habba celebration with pooja, cultural activities, and a shared lunch. It is a day to come together, celebrate our traditions, and create wonderful memories in Trollhättan.",
+        "date": "19th September 2026",
+        "location": "Klintvägen 3, Trollhättan, Sweden",
+        "mapsLink": "https://maps.app.goo.gl/1gDVGbPrAUQrfZ8W9",
+        "plansheet": "https://tinyurl.com/ganeshahubba2026",
+        "eventAgenda": [
+            { "time": "9:00 AM", "item": "Start" },
+            { "time": "9:30 AM", "item": "Pooja" },
+            { "time": "10:00 AM", "item": "Cultural activities" },
+            { "time": "11:00 AM", "item": "Lunch" },
+            { "time": "1:30 PM", "item": "Cleanup & End" }
+          ]
+    }
+]

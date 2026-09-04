@@ -1,21 +1,34 @@
 {
   "files": {
-    "main.css": "/static/css/main.40b7a900.css",
-    "main.js": "/static/js/main.77e07683.js",
-    "static/js/415.fc063c41.chunk.js": "/static/js/415.fc063c41.chunk.js",
-    "static/js/787.f6e65957.chunk.js": "/static/js/787.f6e65957.chunk.js",
+    "main.css": "/static/css/main.b01c93e9.css",
+    "main.js": "/static/js/main.2914cb9f.js",
+    "static/js/596.4fe70015.chunk.js": "/static/js/596.4fe70015.chunk.js",
+    "static/js/287.701899c0.chunk.js": "/static/js/287.701899c0.chunk.js",
+    "static/js/841.ad5dad15.chunk.js": "/static/js/841.ad5dad15.chunk.js",
+    "static/js/200.6a374458.chunk.js": "/static/js/200.6a374458.chunk.js",
+    "static/js/608.a6e6812b.chunk.js": "/static/js/608.a6e6812b.chunk.js",
+    "static/js/550.ba1401cd.chunk.js": "/static/js/550.ba1401cd.chunk.js",
+    "static/js/290.7dffc84f.chunk.js": "/static/js/290.7dffc84f.chunk.js",
+    "static/js/453.92f699af.chunk.js": "/static/js/453.92f699af.chunk.js",
     "static/media/hampi-home-bg.jpg": "/static/media/hampi-home-bg.8f6d35e4f0700cc3f22a.jpg",
+    "static/media/karantaka-flag-logo.jpg": "/static/media/karantaka-flag-logo.2b362f06c05154ef4154.jpg",
     "static/media/karnataka-kavi-map.jpg": "/static/media/karnataka-kavi-map.71ed3eafdfc20afd7b78.jpg",
     "static/media/svflag.png": "/static/media/svflag.380b85027ae332e358b0.png",
     "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
     "index.html": "/index.html",
-    "main.40b7a900.css.map": "/static/css/main.40b7a900.css.map",
-    "main.77e07683.js.map": "/static/js/main.77e07683.js.map",
-    "415.fc063c41.chunk.js.map": "/static/js/415.fc063c41.chunk.js.map",
-    "787.f6e65957.chunk.js.map": "/static/js/787.f6e65957.chunk.js.map"
+    "main.b01c93e9.css.map": "/static/css/main.b01c93e9.css.map",
+    "main.2914cb9f.js.map": "/static/js/main.2914cb9f.js.map",
+    "596.4fe70015.chunk.js.map": "/static/js/596.4fe70015.chunk.js.map",
+    "287.701899c0.chunk.js.map": "/static/js/287.701899c0.chunk.js.map",
+    "841.ad5dad15.chunk.js.map": "/static/js/841.ad5dad15.chunk.js.map",
+    "200.6a374458.chunk.js.map": "/static/js/200.6a374458.chunk.js.map",
+    "608.a6e6812b.chunk.js.map": "/static/js/608.a6e6812b.chunk.js.map",
+    "550.ba1401cd.chunk.js.map": "/static/js/550.ba1401cd.chunk.js.map",
+    "290.7dffc84f.chunk.js.map": "/static/js/290.7dffc84f.chunk.js.map",
+    "453.92f699af.chunk.js.map": "/static/js/453.92f699af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40b7a900.css",
-    "static/js/main.77e07683.js"
+    "static/css/main.b01c93e9.css",
+    "static/js/main.2914cb9f.js"
   ]
 }

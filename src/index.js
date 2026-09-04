@@ -3,12 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Language, setDefault, setTranslations } from '@react-lang/language'
+import { Language, setTranslations } from './Language'
 import en from './Assets/language/en.json'
 import kn from './Assets/language/kn.json'
 import sv from './Assets/language/sv.json'
 
-setDefault('kn')
 setTranslations({ en, kn, sv })
 
 ReactDOM.render(

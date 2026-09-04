@@ -14,7 +14,7 @@ import {
 } from "react-icons/ai";
 
 import { CgFileDocument } from "react-icons/cg";
-import { Language } from '@react-lang/language';
+import { Language } from '../Language';
 
 
 function NavBar() {

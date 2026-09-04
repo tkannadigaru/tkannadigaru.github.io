@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
 import hampiimage from "../../Assets/hampi-home-bg.jpg"
-import { Language } from '@react-lang/language'
+import { Language } from '../../Language'
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 

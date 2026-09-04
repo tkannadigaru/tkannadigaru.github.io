@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
-import { Language } from '@react-lang/language'
+import { Language } from '../../Language'
 
 function AboutCard() {
   return (

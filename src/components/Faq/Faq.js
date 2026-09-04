@@ -20,13 +20,18 @@ function Faq() {
       }
 
 return (
-    <Container fluid className="about-section">
+    <Container fluid className="about-section faq-section">
       <Particle />
-      <MDBContainer borderless style={{maxWidth: '1000px'}}>
-      <MDBAccordion className="mb-4 text-light rounded bg-dark">
+      <MDBContainer className="faq-container" borderless>
+      <div className="faq-intro">
+        <span className="faq-eyebrow">Need to know</span>
+        <h1 className="project-heading">Frequently Asked <strong className="purple">Questions</strong></h1>
+        <p>Find quick answers about Trollhättan Kannadigaru and our community.</p>
+      </div>
+      <MDBAccordion className="faq-accordion">
         {content.map((item, index) => (
-            <MDBAccordionItem collapseId={index} headerTitle={item.question}>
-                <code>{item.answer}</code>
+            <MDBAccordionItem key={item.question || index} collapseId={index} headerTitle={item.question}>
+                <p className="faq-answer">{item.answer}</p>
             </MDBAccordionItem>
         ))}
       </MDBAccordion>

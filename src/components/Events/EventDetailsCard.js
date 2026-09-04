@@ -1,78 +1,52 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
+import { AiOutlineCalendar, AiOutlineEnvironment, AiOutlineFileText, AiOutlineArrowRight } from "react-icons/ai";
 
 function EventDetailsCard(props) {
 
-  const { imagePath, title, description, date, plansheet, eventAgenda } = props;
-
-  let agendaItems = [];
-  console.log(plansheet)
-  if (eventAgenda && typeof eventAgenda === "object") {
-    agendaItems = Object.keys(eventAgenda).map((time) => ({
-      time,
-      item: eventAgenda[time]
-    }));
-  }
+  const { imagePath, title, description, date, plansheet, eventAgenda, location, mapsLink } = props;
+  const agendaItems = Array.isArray(eventAgenda) ? eventAgenda : [];
 
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Container fluid className="event-details-section" id="event-details">
         <Particle />
-        <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                {title}
-              </h1>
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                {description}
-              </h1>
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Date: {date}
-              </h1>
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                <a href={plansheet}>{title} planning sheet</a>
-              </h1>
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Event Agenda: {agendaItems.length > 0 ? (
-                <table style={{ border: "1px solid white", borderCollapse: "collapse" }}>
-                  <thead>
-                    <tr>
-                      <th style={{ border: "1px solid white", padding: "8px" }}>Time</th>
-                      <th style={{ border: "1px solid white", padding: "8px" }}>Agenda</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {eventAgenda.map((agendaItem, index) => (
-                      <tr key={index}>
-                        <td style={{ border: "1px solid white", padding: "8px" }}>
-                          {agendaItem.time}
-                        </td>
-                        <td style={{ border: "1px solid white", padding: "8px" }}>
-                          {agendaItem.item}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              ) : (
-                <p>No agenda items available.</p>
-              )}
-              </h1>
-              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        <Container className="event-details-container">
+          <Row className="event-hero-row">
+            <Col lg={5} className="event-image-column">
+              <img src={imagePath} alt={title} className="event-details-image" />
             </Col>
-
-            <Col md={5} style={{ paddingBottom: 20 }}>
-              <img
-                src={imagePath}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
+            <Col lg={7} className="event-copy-column">
+              <span className="event-eyebrow">Event details</span>
+              <h1 className="event-details-title">{title}</h1>
+              <p className="event-details-description">{description}</p>
+              <div className="event-meta-list">
+                {date && <div className="event-meta-item"><AiOutlineCalendar /><span><small>Date</small>{date}</span></div>}
+                {location && <div className="event-meta-item"><AiOutlineEnvironment /><span><small>Location</small>{location}</span></div>}
+              </div>
+              <div className="event-action-row">
+                {mapsLink && <a className="event-action event-action-primary" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions <AiOutlineArrowRight /></a>}
+                {plansheet && <a className="event-action event-action-secondary" href={plansheet} target="_blank" rel="noopener noreferrer"><AiOutlineFileText /> Planning sheet</a>}
+              </div>
             </Col>
-
           </Row>
+          <section className="event-agenda-panel">
+            <div className="event-section-heading">
+              <span className="event-eyebrow">On the day</span>
+              <h2>Event agenda</h2>
+            </div>
+            {agendaItems.length > 0 ? (
+              <div className="event-agenda-list">
+                {agendaItems.map((agendaItem, index) => (
+                  <div className="event-agenda-item" key={`${agendaItem.time}-${index}`}>
+                    <time>{agendaItem.time}</time>
+                    <span>{agendaItem.item}</span>
+                  </div>
+                ))}
+              </div>
+            ) : <p className="event-empty-state">Agenda details will be added soon.</p>}
+          </section>
         </Container>
       </Container>
     </section>

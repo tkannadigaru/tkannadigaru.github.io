@@ -4,6 +4,8 @@ import Particle from "../Particle";
 import Type from "./Type";
 import hampiimage from "../../Assets/hampi-home-bg.jpg"
 import { Language } from '@react-lang/language'
+import { Link } from "react-router-dom";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 function Home() {
   return (
@@ -37,13 +39,16 @@ function Home() {
               <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
+            <Col md={5} className="home-image-column" style={{ paddingBottom: 20 }}>
               <img
                 src={hampiimage}
                 alt="home pic"
                 className="img-fluid"
                 style={{ maxHeight: "450px" }}
               />
+              <Link className="event-home-link" to="/nextevent">
+                Discover our next event <AiOutlineArrowRight />
+              </Link>
             </Col>
 
           </Row>

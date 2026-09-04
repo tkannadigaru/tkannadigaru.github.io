@@ -49,6 +49,7 @@ function Events() {
                 imgPath={"eventphotos/noevents.jpg"}
                 title={"No upcoming events planned"}
                 description={"We are working on planning the next big event"}
+                clickable={false}
               />
             </Col>
         ): (
@@ -59,6 +60,7 @@ function Events() {
                 title={item.title}
                 description={item.description}
                 status={item.status}
+                clickable={false}
               />
             </Col>
             )))}
@@ -78,6 +80,7 @@ function Events() {
                 imgPath={item.imagePath}
                 title={item.title}
                 description={item.description}
+                clickable={false}
               />
             </Col>
         ))}

@@ -1,5 +1,10 @@
 [
     {
+        "title": "Ganesha Chathurthi 2026",
+        "imagePath": "eventphotos/ganesha-habba-2026.jpeg",
+        "description": "Families and friends gathered to celebrate Ganesha Habba through prayer, cultural traditions, delicious food, and a memorable day together."
+    },
+    {
         "title": "Ugadi 2026",
         "imagePath": "eventphotos/Ugadi_2026.jpeg",
         "description": "Families came together to welcome the Kannada New Year with Ugadi traditions, festive food, laughter, and a warm community celebration."
@@ -8,10 +13,5 @@
         "title": "Deepavali 2025",
         "imagePath": "eventphotos/Deepavali_2025.jpeg",
         "description": "Our community celebrated Deepavali with the glow of lights, shared food, joyful conversations, and the spirit of togetherness that makes the festival special."
-    },
-    {
-        "title": "Ganesha Habba 2025",
-        "imagePath": "eventphotos/ganesha-habba-2025.jpeg",
-        "description": "Families and friends gathered to celebrate Ganesha Habba through prayer, cultural traditions, delicious food, and a memorable day together."
     }
 ]

@@ -1,0 +1,19 @@
+[
+    {
+        "title": "Deepavali 2026",
+        "imagePath": "eventphotos/deepavali_2026.jpeg",
+        "description": "Join families from across our community for a joyful Deepavali celebration with pooja, cultural activities, and a shared lunch. It is a day to come together, celebrate our traditions, and create wonderful memories in Trollhättan.",
+        "date": "14th November 2026",
+        "location": "Halvors väg 100, 461 42 Trollhättan",
+        "mapsLink": "https://maps.app.goo.gl/BA64sRGVPjsGZ38y8",
+        "eventAgenda": [
+            { "time": "10:00 AM", "item": "Start" },
+            { "time": "10:00 AM", "item": "Pooja" },
+            { "time": "11:00 AM", "item": "Cultural Activities" },
+            { "time": "12:30 PM", "item": "Lunch" },
+            { "time": "2:00 PM", "item": "Games & Fun" },
+            { "time": "4:00 PM", "item": "Cultural Performances" },
+            { "time": "5:00 PM", "item": "Cleanup & End" }
+          ]
+    }
+]

@@ -2,10 +2,11 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import { AiOutlineCalendar, AiOutlineEnvironment, AiOutlineFileText, AiOutlineArrowRight } from "react-icons/ai";
+import { FaWhatsapp, FaWpforms } from "react-icons/fa";
 
 function EventDetailsCard(props) {
 
-  const { imagePath, title, description, date, plansheet, eventAgenda, location, mapsLink } = props;
+  const { imagePath, title, description, date, plansheet, whatsappGroupLink, registrationLink, eventAgenda, location, mapsLink } = props;
   const agendaItems = Array.isArray(eventAgenda) ? eventAgenda : [];
 
   return (
@@ -28,6 +29,8 @@ function EventDetailsCard(props) {
               <div className="event-action-row">
                 {mapsLink && <a className="event-action event-action-primary" href={mapsLink} target="_blank" rel="noopener noreferrer">Get directions <AiOutlineArrowRight /></a>}
                 {plansheet && <a className="event-action event-action-secondary" href={plansheet} target="_blank" rel="noopener noreferrer"><AiOutlineFileText /> Planning sheet</a>}
+                {whatsappGroupLink && <a className="event-action event-action-secondary" href={whatsappGroupLink} target="_blank" rel="noopener noreferrer"><FaWhatsapp /> WhatsApp group</a>}
+                {registrationLink && <a className="event-action event-action-primary" href={registrationLink} target="_blank" rel="noopener noreferrer"><FaWpforms /> Register now</a>}
               </div>
             </Col>
           </Row>

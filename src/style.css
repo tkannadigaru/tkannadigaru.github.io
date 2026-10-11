@@ -625,6 +625,61 @@ button:focus {
   background: rgba(242, 184, 75, 0.1);
 }
 
+.home-event-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 2rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid rgba(242, 184, 75, 0.8);
+  border-radius: 0.6rem;
+  color: var(--deep-teal);
+  background: var(--saffron);
+  animation: home-banner-blink 1.8s ease-in-out infinite;
+}
+
+.home-event-banner-next,
+.home-event-banner-register {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.home-event-banner-next strong {
+  margin-left: 0.25rem;
+}
+
+.home-event-banner-register {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex: 0 0 auto;
+}
+
+.home-event-banner-next:hover,
+.home-event-banner-register:hover {
+  color: #3f2e0d;
+  text-decoration: underline;
+}
+
+@keyframes home-banner-blink {
+  50% { filter: brightness(1.2); }
+}
+
+@media (max-width: 576px) {
+  .home-event-banner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-event-banner {
+    animation: none;
+  }
+}
+
 .event-agenda-panel {
   max-width: 820px;
   margin: 0 auto;
@@ -903,6 +958,15 @@ body {
 
 .home-content {
   padding: 5rem 0 6rem !important;
+}
+
+.home-event-banner-container {
+  position: relative;
+  z-index: 2;
+}
+
+.home-event-banner {
+  margin-bottom: 0;
 }
 
 .heading,

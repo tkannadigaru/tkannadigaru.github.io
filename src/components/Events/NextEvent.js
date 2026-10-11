@@ -40,6 +40,8 @@ function NextEvent() {
         location={item.location}
         mapsLink={item.mapsLink}
         plansheet={item.plansheet}
+        whatsappGroupLink={item.whatsappGroupLink}
+        registrationLink={item.registrationLink}
         eventAgenda={item.eventAgenda}
       />
     ))

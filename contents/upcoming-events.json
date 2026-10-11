@@ -1,10 +1,12 @@
 [
     {
-        "title": "Deepavali 2026",
+        "title": "Rajyotsava and Deepavali 2026",
+        "eventId": "Deepavali_2026",
         "status": "active"
     },
     {
         "title": "Ugadi 2027",
+        "eventId": "Ugadi_2027",
         "imagePath": "eventphotos/ugadi_2027.jpeg",
         "description": "Families came together to welcome the Kannada New Year with Ugadi traditions, festive food, laughter, and a warm community celebration."
     }

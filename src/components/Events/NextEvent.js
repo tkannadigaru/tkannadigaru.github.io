@@ -17,7 +17,7 @@ function NextEvent() {
           return;
         }
 
-        const eventFileName = activeEvent.title.replace(/\s/g, "_");
+        const eventFileName = activeEvent.eventId || activeEvent.title.replace(/\s/g, "_");
         const detailsResponse = await fetch(`contents/${eventFileName}.json`);
         const details = await detailsResponse.json();
         setEventContent(details);

@@ -1020,6 +1020,63 @@ body {
   cursor: default;
 }
 
+.gallery-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 9rem 0 5rem;
+  background: var(--section-background-color);
+}
+
+.gallery-content {
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-title {
+  margin: 0 0 2rem;
+  color: var(--ink);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.05;
+}
+
+.gallery-message {
+  color: var(--muted-ink);
+  font-size: 1.05rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: 1rem;
+}
+
+.gallery-photo {
+  display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border: 1px solid rgba(247, 243, 233, 0.16);
+  border-radius: 0.5rem;
+  background: rgba(18, 59, 60, 0.65);
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 180ms ease;
+}
+
+.gallery-photo:hover img,
+.gallery-photo:focus-visible img {
+  transform: scale(1.035);
+}
+
+.gallery-photo:focus-visible {
+  outline: 2px solid var(--saffron);
+  outline-offset: 3px;
+}
+
 .project-card-view .card-img-top {
   height: 220px;
   object-fit: cover;

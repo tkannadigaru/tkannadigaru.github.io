@@ -80,7 +80,8 @@ function Events() {
                 imgPath={item.imagePath}
                 title={item.title}
                 description={item.description}
-                clickable={false}
+                eventId={item.eventId}
+                gallery
               />
             </Col>
         ))}

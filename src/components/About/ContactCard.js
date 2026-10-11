@@ -7,7 +7,7 @@ function ContactCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "left" }}>
-            <p>Email: trollhattenkannadigaru@gmail.com</p>
+            <p>Email: trollhattankannadigaru@gmail.com</p>
             <p>Facebook: https://facebook.com/groups/964408994572232</p>
           </p>
         </blockquote>

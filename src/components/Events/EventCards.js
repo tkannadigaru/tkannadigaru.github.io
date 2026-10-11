@@ -5,30 +5,33 @@ import { useNavigate } from "react-router-dom";
 function EventCards(props) {
   const navigate = useNavigate();
   const [detailsAvailable, setDetailsAvailable] = useState(false);
-  const canOpenDetails = props.clickable !== false && detailsAvailable;
+  const canOpenGallery = props.gallery === true;
+  const canOpenDetails = !canOpenGallery && props.clickable !== false && detailsAvailable;
 
   useEffect(() => {
-    if (props.clickable === false) {
+    if (props.clickable === false || canOpenGallery) {
       return;
     }
 
-    const eventFileName = props.title.replace(/\s/g, "_");
+    const eventFileName = props.eventId || props.title.replace(/\s/g, "_");
     const eventDetailsPath = `contents/${eventFileName}.json`;
 
     fetch(eventDetailsPath, { method: "HEAD" })
       .then((response) => setDetailsAvailable(response.ok))
       .catch(() => setDetailsAvailable(false));
-  }, [props.title, props.clickable]);
+  }, [props.title, props.eventId, props.clickable, canOpenGallery]);
 
   const handleClick = () => {
-    if (canOpenDetails) {
-      navigate(`/events/${props.title}`);
+    if (canOpenGallery) {
+      navigate(`/gallery/${encodeURIComponent(props.eventId || props.title)}`);
+    } else if (canOpenDetails) {
+      navigate(`/events/${encodeURIComponent(props.eventId || props.title)}`);
     }
   };
 
   return (
     <div
-      className={canOpenDetails ? "event-card-link" : "event-card-static"}
+      className={canOpenDetails || canOpenGallery ? "event-card-link" : "event-card-static"}
       onClick={handleClick}
       onKeyDown={(event) => {
         if (event.key === "Enter" || event.key === " ") {
@@ -36,12 +39,12 @@ function EventCards(props) {
           handleClick();
         }
       }}
-      role={canOpenDetails ? "link" : undefined}
-      tabIndex={canOpenDetails ? 0 : undefined}
-      aria-label={canOpenDetails ? `View details for ${props.title}` : undefined}
+      role={canOpenDetails || canOpenGallery ? "link" : undefined}
+      tabIndex={canOpenDetails || canOpenGallery ? 0 : undefined}
+      aria-label={canOpenGallery ? `View photos from ${props.title}` : canOpenDetails ? `View details for ${props.title}` : undefined}
     >
       <Card className="project-card-view">
-        <Card.Img variant="top" src={props.imgPath} alt="card-img" />
+        <Card.Img variant="top" src={props.imgPath} alt={props.title} />
         <Card.Body>
           <Card.Title>{props.title}</Card.Title>
           <Card.Text style={{ textAlign: "justify" }}>

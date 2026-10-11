@@ -1,27 +1,22 @@
 // EventPage.js
 import React, {useEffect, useState} from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import EventDetailsCard from "./EventDetailsCard";
 
 function EventPage() {
 
-  const location = useLocation();
-  const currentPath = decodeURIComponent(location.pathname);
-  const pathSegments = currentPath.split("/");
-  const eventName = pathSegments[pathSegments.length - 1];
-  console.log(eventName)
+  const { eventId } = useParams();
 
   const [content, setContent] = useState(null);
 
   useEffect(() => {
       async function fetchContent() {
-        const formattedEventName = eventName.replace(/\s/g, "_");
-        const response = await fetch(`../contents/${formattedEventName}.json`);
+        const response = await fetch(`${process.env.PUBLIC_URL}/contents/${eventId}.json`);
         const data = await response.json();
         setContent(data);
       }
       fetchContent();
-    }, [eventName]);
+    }, [eventId]);
 
     return (
       <div>

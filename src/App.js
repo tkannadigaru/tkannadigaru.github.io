@@ -7,6 +7,7 @@ import Faq from "./components/Faq/Faq";
 import Events from "./components/Events/Events";
 import NextEvent from "./components/Events/NextEvent";
 import EventPage from "./components/Events/EventPage";
+import Gallery from "./components/Events/Gallery";
 import Footer from "./components/Footer";
 import {
   HashRouter as Router,
@@ -44,6 +45,7 @@ function App() {
           <Route path="/nextevent" element={<NextEvent />} />
           <Route path="/events" element={<Events />} />
           <Route path="/events/*" element={<EventPage />} />
+          <Route path="/gallery/:eventId" element={<Gallery />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="*" element={<Navigate to="/"/>} />

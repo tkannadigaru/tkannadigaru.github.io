@@ -39,7 +39,7 @@ function Home() {
           <Container className="home-event-banner-container">
             <div className="home-event-banner">
               <Link className="home-event-banner-next" to="/nextevent">
-                Next event: <strong>{nextEvent.title}</strong>
+                Next event: <strong>{nextEvent.title} - Registration closes 3rd November!!</strong>
               </Link>
               <a
                 className="home-event-banner-register"

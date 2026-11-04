@@ -35,11 +35,11 @@ function Home() {
     <section>
       <Container fluid className="home-section" id="home">
         <Particle />
-        {nextEvent.registrationLink && (
+        {nextEvent && (
           <Container className="home-event-banner-container">
             <div className="home-event-banner">
               <Link className="home-event-banner-next" to="/nextevent">
-                Next event: <strong>{nextEvent.title} - Registration closes 3rd November!!</strong>
+                Next event: <strong>{nextEvent.title} - Registration closed!! Preparations for the event are ongoing! Look for details here</strong>
               </Link>
               <a
                 className="home-event-banner-register"
@@ -47,7 +47,7 @@ function Home() {
                 target={nextEvent.registrationLink ? "_blank" : undefined}
                 rel={nextEvent.registrationLink ? "noopener noreferrer" : undefined}
               >
-                Register Now <AiOutlineArrowRight />
+                Event details <AiOutlineArrowRight />
               </a>
             </div>
           </Container>

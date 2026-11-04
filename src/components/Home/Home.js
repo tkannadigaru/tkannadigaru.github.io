@@ -9,8 +9,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 function Home() {
   const [nextEvent, setNextEvent] = useState(null);
-  const [setNextEvent] = useState(null);
-
+  
   useEffect(() => {
     async function loadNextEvent() {
       try {

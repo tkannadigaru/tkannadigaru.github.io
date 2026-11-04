@@ -9,6 +9,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 function Home() {
   const [nextEvent, setNextEvent] = useState(null);
+  const [setNextEvent] = useState(null);
 
   useEffect(() => {
     async function loadNextEvent() {
@@ -35,7 +36,7 @@ function Home() {
     <section>
       <Container fluid className="home-section" id="home">
         <Particle />
-        {/* {nextEvent && (
+        {nextEvent.registrationLink && (
           <Container className="home-event-banner-container">
             <div className="home-event-banner">
               <Link className="home-event-banner-next" to="/nextevent">
@@ -51,7 +52,7 @@ function Home() {
               </a>
             </div>
           </Container>
-        )} */}
+        )}
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">

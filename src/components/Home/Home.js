@@ -39,7 +39,7 @@ function Home() {
           <Container className="home-event-banner-container">
             <div className="home-event-banner">
               <Link className="home-event-banner-next" to="/nextevent">
-                Next event: <strong>{nextEvent.title} - Registration closed!! Preparations for the event are ongoing! Look for details here</strong>
+                <strong>{nextEvent.title} was very successful, Thanks to everyone who participated! The planning sheet and whatsapp group are live for 1 more week, make sure you download all photos</strong>
               </Link>
               <a
                 className="home-event-banner-register"

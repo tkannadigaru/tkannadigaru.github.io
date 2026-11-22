@@ -13,5 +13,10 @@
     "eventId": "Dpvli_2025",
     "title": "Deepavali 2025",
     "images": []
+  },
+  {
+    "eventId": "Dpvli_2026",
+    "title": "Deepavali 2026",
+    "images": ["deepavali_2026.jpeg","mysoor_pak.jpeg","payasa.jpeg"]
   }
 ]

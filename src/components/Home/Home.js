@@ -7,12 +7,24 @@ import { Language } from '../../Language'
 import { Link } from "react-router-dom";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
+// Set this to true to show the next-event banner again.
+const SHOW_NEXT_EVENT_BANNER = false;
+
+// Edit the banner message and links here.
+// title and detailsLink are optional. If not provided, the next event's title and registration link will be used instead.
+const NEXT_EVENT_BANNER_INFO = {
+  title: "",
+  message: "was very successful, Thanks to everyone who participated! The planning sheet and whatsapp group are live for 1 more week, make sure you download all photos",
+  detailsLink: "",
+  detailsText: "Event details",
+};
+
 function Home() {
-  const [setNextEvent] = useState(null);
-  // Uncomment this to add banner
-  // const [nextEvent, setNextEvent] = useState(null);
-  
+  const [nextEvent, setNextEvent] = useState(null);
+
   useEffect(() => {
+    if (!SHOW_NEXT_EVENT_BANNER) return;
+
     async function loadNextEvent() {
       try {
         const response = await fetch("contents/upcoming-events.json");
@@ -37,23 +49,27 @@ function Home() {
     <section>
       <Container fluid className="home-section" id="home">
         <Particle />
-        {/* {nextEvent && (
+        {SHOW_NEXT_EVENT_BANNER && nextEvent && (
           <Container className="home-event-banner-container">
             <div className="home-event-banner">
               <Link className="home-event-banner-next" to="/nextevent">
-                <strong>{nextEvent.title} was very successful, Thanks to everyone who participated! The planning sheet and whatsapp group are live for 1 more week, make sure you download all photos</strong>
+                <strong>
+                  {NEXT_EVENT_BANNER_INFO.title || nextEvent.title}
+                  {" "}
+                  {NEXT_EVENT_BANNER_INFO.message}
+                </strong>
               </Link>
               <a
                 className="home-event-banner-register"
-                href={nextEvent.registrationLink || `${process.env.PUBLIC_URL}/#/nextevent#event-details`}
-                target={nextEvent.registrationLink ? "_blank" : undefined}
-                rel={nextEvent.registrationLink ? "noopener noreferrer" : undefined}
+                href={NEXT_EVENT_BANNER_INFO.detailsLink || nextEvent.registrationLink || `${process.env.PUBLIC_URL}/#/nextevent#event-details`}
+                target={NEXT_EVENT_BANNER_INFO.detailsLink || nextEvent.registrationLink ? "_blank" : undefined}
+                rel={NEXT_EVENT_BANNER_INFO.detailsLink || nextEvent.registrationLink ? "noopener noreferrer" : undefined}
               >
-                Event details <AiOutlineArrowRight />
+                {NEXT_EVENT_BANNER_INFO.detailsText} <AiOutlineArrowRight />
               </a>
             </div>
           </Container>
-        )} */}
+        )}
         <Container className="home-content">
           <Row>
             <Col md={7} className="home-header">
@@ -67,7 +83,6 @@ function Home() {
               </h1></>}
               </Language.Consumer>
 
-              
               <Language.Consumer>
                 {({ get }) => <><h1 className="heading-name">
                 {get('weare')}

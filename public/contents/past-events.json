@@ -16,5 +16,11 @@
         "eventId": "Dpvli_2025",
         "imagePath": "eventphotos/Deepavali_2025.jpeg",
         "description": "Our community celebrated Deepavali with the glow of lights, shared food, joyful conversations, and the spirit of togetherness that makes the festival special."
+    },
+        {
+        "title": "Deepavali 2026",
+        "eventId": "Dpvli_2026",
+        "imagePath": "eventphotos/deepavali_2026.jpeg",
+        "description": "Our community celebrated Deepavali with the glow of lights, shared food, joyful conversations, and the spirit of togetherness that makes the festival special."
     }
 ]

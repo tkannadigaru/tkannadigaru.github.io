@@ -12,8 +12,8 @@ function Type() {
         ],
         autoStart: true,
         loop: true,
-        delay: 25,
-        pauseFor: 2000,
+        delay: 57,
+        pauseFor: 5000,
         deleteSpeed: 0,
       }}
     />
